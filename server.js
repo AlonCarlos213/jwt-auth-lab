@@ -10,8 +10,12 @@ const app = express();
 
 // 🌐 Configurar CORS (opcional si solo pruebas en localhost)
 const corsOptions = {
-  origin: "http://localhost:5173", // ✅ Puerto correcto para Vite
+  origin: [
+    "http://localhost:5173", 
+    "https://react-auth-app-1ck9.onrender.com"
+  ],
 };
+
 
 app.use(cors(corsOptions));
 
